@@ -36,7 +36,14 @@ contract Address {
         require(success, "Call failed");
     }
 
+    //Function to send Ether to this contract
+    function giveMoneyToThisContract() external payable {
+        //Do nothing
+    }
+
     // Fallback function to receive Ether
     receive() external payable {}
+
+    fallback() external payable {}
 
 }
