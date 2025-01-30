@@ -4,6 +4,7 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 
 Try running some of the following tasks:
 
+#Basics
 ```shell
 npx hardhat help
 npx hardhat test
@@ -19,4 +20,19 @@ npx hardhat ignition deploy ./ignition/modules/Lock.js
 ```shell
 npx hardhat compile
 npx hardhat run scripts/deploy.js --network hardhat
+```
+
+#3 Test contracts
+```shell
+npx hardhat node
+npx hardhat run scripts/deploy.js --network localhost
+npx hardhat console --network localhost
+```
+
+#4 Call contract functions
+```js
+const [deployer] = await ethers.getSigners();
+const contract = await ethers.getContractAt("CONTRACT", "DEPLOYED_CONTRACT_ADDRESS");
+await contract.functionName();
+console.log(await contract.functionName());
 ```
