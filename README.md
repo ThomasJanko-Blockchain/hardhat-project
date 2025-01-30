@@ -36,3 +36,9 @@ const contract = await ethers.getContractAt("CONTRACT", "DEPLOYED_CONTRACT_ADDRE
 await contract.functionName();
 console.log(await contract.functionName());
 ```
+
+ou
+
+```shell
+npx hardhat run scripts/interact.js --network localhost
+```
